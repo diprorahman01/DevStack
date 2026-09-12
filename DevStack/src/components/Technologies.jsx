@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 import TechnologyCard from "./TechnologyCard";
 import Stack from "./Stack";
@@ -17,61 +18,52 @@ import tailwindIcon from "../assets/Tailwind CSS.png";
 import dockerIcon from "../assets/Docker.png";
 
 
-const Technologies = () => {
+function Technologies() {
 
   const [technologies, setTechnologies] = useState([]);
-
   const [loading, setLoading] = useState(true);
-
   const [selectedTechnologies, setSelectedTechnologies] = useState([]);
 
 
   const technologyIcons = {
-
     react: reactIcon,
-
     vue: vueIcon,
-
     svelte: svelteIcon,
-
     nextjs: nextIcon,
-
     nodejs: nodeIcon,
-
     postgresql: postgresIcon,
-
     redis: redisIcon,
-
     javascript: javascriptIcon,
-
     typescript: typescriptIcon,
-
     java: javaIcon,
-
     tailwind: tailwindIcon,
-
     docker: dockerIcon
-
   };
 
 
   useEffect(() => {
 
     fetch("/technologies.json")
+      .then((response) => {
 
-      .then((response) => response.json())
+        if (!response.ok) {
+          throw new Error("Could not load technologies");
+        }
 
+        return response.json();
+
+      })
       .then((data) => {
 
         setTechnologies(data);
-
         setLoading(false);
 
       })
-
       .catch((error) => {
 
-        console.log("Error loading technologies:", error);
+        console.log(error);
+
+        toast.error("Failed to load technologies.");
 
         setLoading(false);
 
@@ -89,7 +81,9 @@ const Technologies = () => {
 
     if (alreadyAdded) {
 
-      alert("This technology is already in your stack.");
+      toast.warning(
+        `${technology.name} is already in your stack.`
+      );
 
       return;
 
@@ -101,24 +95,57 @@ const Technologies = () => {
       technology
     ]);
 
+
+    toast.success(
+      `${technology.name} added to your stack.`
+    );
+
   };
 
 
   const handleRemoveTechnology = (id) => {
 
-    const remainingTechnologies = selectedTechnologies.filter(
-      (technology) => technology.id !== id
+    const removedTechnology = selectedTechnologies.find(
+      (item) => item.id === id
     );
 
 
-    setSelectedTechnologies(remainingTechnologies);
+    const updatedStack = selectedTechnologies.filter(
+      (item) => item.id !== id
+    );
+
+
+    setSelectedTechnologies(updatedStack);
+
+
+    if (removedTechnology) {
+
+      toast.info(
+        `${removedTechnology.name} removed from your stack.`
+      );
+
+    }
 
   };
 
 
   const handleRemoveAll = () => {
 
+    if (selectedTechnologies.length === 0) {
+
+      toast.warning("Your stack is already empty.");
+
+      return;
+
+    }
+
+
     setSelectedTechnologies([]);
+
+
+    toast.info(
+      "All technologies removed from your stack."
+    );
 
   };
 
@@ -139,7 +166,6 @@ const Technologies = () => {
             Explore the <span>Technologies</span>
           </h2>
 
-
           <p>
             Pick one technology per category to build your ideal stack.
           </p>
@@ -151,7 +177,6 @@ const Technologies = () => {
 
 
           <div className="technology-grid">
-
 
             {loading ? (
 
@@ -175,7 +200,6 @@ const Technologies = () => {
 
             )}
 
-
           </div>
 
 
@@ -194,7 +218,8 @@ const Technologies = () => {
     </section>
 
   );
-};
+
+}
 
 
 export default Technologies;

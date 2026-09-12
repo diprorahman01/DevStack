@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
 
 import hamburger from "./assets/hamburger.png";
 import hero from "./assets/banner-stack.png";
@@ -13,7 +14,6 @@ function App() {
 
 
   return (
-
     <>
 
       {/* NAVBAR */}
@@ -22,17 +22,11 @@ function App() {
 
         <div className="navbar-container">
 
-
           <button
             className="hamburger"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-
-            <img
-              src={hamburger}
-              alt="Menu"
-            />
-
+            <img src={hamburger} alt="Menu" />
           </button>
 
 
@@ -41,7 +35,6 @@ function App() {
             <div className="brand-logo">
               DS
             </div>
-
 
             <h2>
               Dev <span>Stack</span>
@@ -53,14 +46,10 @@ function App() {
           <ul className="nav-links">
 
             <li>
-              <a
-                className="active"
-                href="#home"
-              >
+              <a className="active" href="#home">
                 Home
               </a>
             </li>
-
 
             <li>
               <a href="#technologies">
@@ -68,20 +57,17 @@ function App() {
               </a>
             </li>
 
-
             <li>
               <a href="#projects">
                 Projects
               </a>
             </li>
 
-
             <li>
               <a href="#about">
                 About
               </a>
             </li>
-
 
             <li>
               <a href="#contact">
@@ -97,7 +83,6 @@ function App() {
             <button className="sign-in">
               Sign In
             </button>
-
 
             <button className="sign-up">
               Sign Up
@@ -119,14 +104,12 @@ function App() {
               Home
             </a>
 
-
             <a
               href="#technologies"
               onClick={() => setMenuOpen(false)}
             >
               Technologies
             </a>
-
 
             <a
               href="#projects"
@@ -135,14 +118,12 @@ function App() {
               Projects
             </a>
 
-
             <a
               href="#about"
               onClick={() => setMenuOpen(false)}
             >
               About
             </a>
-
 
             <a
               href="#contact"
@@ -159,43 +140,30 @@ function App() {
 
 
 
-      {/* HERO SECTION */}
+      {/* HERO */}
 
-      <section
-        className="hero-section"
-        id="home"
-      >
+      <section className="hero-section" id="home">
 
         <div className="hero-container">
-
 
           <div className="hero-content">
 
             <h1>
-
               Build Your Ideal
-
               <br />
 
               <span className="hero-gradient">
                 Development Stack
               </span>
-
             </h1>
 
 
             <p>
-
               Explore frontend, backend, database, and tooling options,
-
               <br className="desktop-break" />
-
               compare them side by side, and put together the stack that fits your
-
               <br className="desktop-break" />
-
               next project.
-
             </p>
 
 
@@ -207,7 +175,6 @@ function App() {
               >
                 Explore Technologies
               </a>
-
 
               <a
                 className="learn-btn"
@@ -236,7 +203,7 @@ function App() {
 
 
 
-      {/* TECHNOLOGIES SECTION */}
+      {/* TECHNOLOGIES */}
 
       <Technologies />
 
@@ -247,8 +214,20 @@ function App() {
       <Footer />
 
 
-    </>
 
+      {/* TOASTIFY */}
+
+      <ToastContainer
+        position="top-right"
+        autoClose={2500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        theme="light"
+      />
+
+    </>
   );
 }
 

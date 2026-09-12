@@ -5,6 +5,7 @@ const Stack = ({
   handleRemoveAll
 }) => {
 
+
   return (
 
     <div className="stack-panel">
@@ -18,6 +19,7 @@ const Stack = ({
       {selectedTechnologies.length === 0 ? (
 
         <>
+
           <p className="stack-count">
             No technologies selected yet.
           </p>
@@ -26,13 +28,21 @@ const Stack = ({
           <div className="stack-empty">
             Your stack is empty.
           </div>
+
         </>
 
       ) : (
 
         <>
+
           <p className="stack-count">
-            {selectedTechnologies.length} Technology Selected
+
+            {selectedTechnologies.length}
+
+            {selectedTechnologies.length === 1
+              ? " Technology Selected"
+              : " Technologies Selected"}
+
           </p>
 
 
@@ -44,6 +54,7 @@ const Stack = ({
                 className="stack-item"
                 key={technology.id}
               >
+
 
                 <div className="stack-item-left">
 
@@ -77,6 +88,7 @@ const Stack = ({
                   ×
                 </button>
 
+
               </div>
 
             ))}
@@ -90,13 +102,16 @@ const Stack = ({
           >
             Remove All
           </button>
+
         </>
 
       )}
 
+
     </div>
 
   );
+
 };
 
 

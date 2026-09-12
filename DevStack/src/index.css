@@ -1,3 +1,13 @@
+:root {
+  --brand-gradient: linear-gradient(
+    90deg,
+    #FF5A1F,
+    #EC4899,
+    #9333EA
+  );
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -15,9 +25,7 @@ body {
 }
 
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 .navBar {
   width: 100%;
@@ -67,13 +75,16 @@ body {
 }
 
 .brand h2 span {
-  color: #DB2777;
+  background: var(--brand-gradient);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
 }
 
 
-/* =========================
-   NAVIGATION LINKS
-========================= */
+/* NAVIGATION LINKS */
 
 .nav-links {
   list-style: none;
@@ -101,9 +112,7 @@ body {
 }
 
 
-/* =========================
-   AUTH BUTTONS
-========================= */
+/* AUTH BUTTONS */
 
 .auth-buttons {
   display: flex;
@@ -146,9 +155,7 @@ body {
 }
 
 
-/* =========================
-   HAMBURGER
-========================= */
+/* HAMBURGER */
 
 .hamburger {
   display: none;
@@ -171,18 +178,14 @@ body {
 }
 
 
-/* =========================
-   MOBILE MENU
-========================= */
+/* MOBILE MENU */
 
 .mobile-menu {
   display: none;
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero-section {
   width: 100%;
@@ -217,12 +220,7 @@ body {
 }
 
 .hero-gradient {
-  background: linear-gradient(
-    90deg,
-    #FF5A1F,
-    #EC4899,
-    #9333EA
-  );
+  background: var(--brand-gradient);
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -262,11 +260,7 @@ body {
 
   color: #FFFFFF;
 
-  background: linear-gradient(
-    90deg,
-    #FF5A1F,
-    #EC4899
-  );
+  background: var(--brand-gradient);
 }
 
 .learn-btn {
@@ -281,9 +275,7 @@ body {
 }
 
 
-/* =========================
-   HERO IMAGE
-========================= */
+/* HERO IMAGE */
 
 .hero-image {
   width: 45%;
@@ -303,18 +295,19 @@ body {
 }
 
 
-/* =========================
-   TECHNOLOGIES SECTION
-========================= */
+/* TECHNOLOGIES */
 
 .technologies-section {
   width: 100%;
+
   background: #FFFFFF;
+
   padding: 55px 0 90px;
 }
 
 .technologies-container {
   max-width: 1360px;
+
   margin: 0 auto;
   padding: 0 34px;
 }
@@ -325,6 +318,7 @@ body {
 
 .technologies-heading h2 {
   color: #0F172A;
+
   font-size: 35px;
   font-weight: 700;
 }
@@ -335,25 +329,24 @@ body {
 
 .technologies-heading p {
   margin-top: 7px;
+
   color: #94A3B8;
+
   font-size: 15px;
 }
 
 
-/* =========================
-   TECHNOLOGIES LAYOUT
-========================= */
+/* TECHNOLOGIES LAYOUT */
 
 .technologies-layout {
   display: flex;
   align-items: flex-start;
+
   gap: 30px;
 }
 
 
-/* =========================
-   TECHNOLOGY GRID
-========================= */
+/* TECHNOLOGY GRID */
 
 .technology-grid {
   width: 77%;
@@ -367,12 +360,11 @@ body {
 }
 
 
-/* =========================
-   TECHNOLOGY CARD
-========================= */
+/* TECHNOLOGY CARD */
 
 .technology-card {
   width: 100%;
+
   padding: 22px;
 
   background: #FFFFFF;
@@ -387,77 +379,65 @@ body {
 }
 
 
-/* =========================
-   INDIVIDUAL DESKTOP CARD HEIGHTS
-========================= */
+/* INDIVIDUAL DESKTOP CARD HEIGHTS */
 
 @media (min-width: 769px) {
 
-  /* FIRST ROW */
-
   .card-react {
-    height: 270px;
+    height: 285px;
   }
 
   .card-vue {
-    height: 250px;
-  }
-
-  .card-svelte {
-    height: 270px;
-  }
-
-
-  /* SECOND ROW */
-
-  .card-nextjs {
     height: 265px;
   }
 
+  .card-svelte {
+    height: 285px;
+  }
+
+
+  .card-nextjs {
+    height: 280px;
+  }
+
   .card-nodejs {
-    height: 246px;
+    height: 260px;
   }
 
   .card-postgresql {
-    height: 246px;
+    height: 260px;
   }
 
 
-  /* THIRD ROW */
-
   .card-redis {
-    height: 260px;
+    height: 275px;
   }
 
   .card-javascript {
-    height: 260px;
+    height: 275px;
   }
 
   .card-typescript {
-    height: 240px;
+    height: 255px;
   }
 
 
-  /* FOURTH ROW */
-
   .card-java {
-    height: 260px;
+    height: 275px;
   }
 
   .card-tailwind {
-    height: 260px;
+    height: 275px;
   }
 
   .card-docker {
-    height: 240px;
+    height: 255px;
   }
 
 }
 
 
-/* =========================
-   CARD TOP
-========================= */
+/* CARD TOP */
 
 .card-top {
   display: flex;
@@ -473,9 +453,7 @@ body {
 }
 
 
-/* =========================
-   TECHNOLOGY BADGES
-========================= */
+/* BADGES */
 
 .technology-badge {
   padding: 5px 11px;
@@ -543,9 +521,7 @@ body {
 }
 
 
-/* =========================
-   CARD TITLE
-========================= */
+/* CARD CONTENT */
 
 .technology-card h3 {
   margin-top: 17px;
@@ -558,11 +534,6 @@ body {
   line-height: 1.2;
 }
 
-
-/* =========================
-   CARD DESCRIPTION
-========================= */
-
 .technology-description {
   margin-top: 10px;
 
@@ -571,11 +542,6 @@ body {
   font-size: 13px;
   line-height: 1.55;
 }
-
-
-/* =========================
-   CARD INFORMATION
-========================= */
 
 .technology-info {
   margin-top: auto;
@@ -620,9 +586,7 @@ body {
 }
 
 
-/* =========================
-   ADD TO STACK
-========================= */
+/* ADD TO STACK */
 
 .add-stack-btn {
   width: 100%;
@@ -649,9 +613,7 @@ body {
 }
 
 
-/* =========================
-   YOUR STACK
-========================= */
+/* STACK */
 
 .stack-panel {
   width: 23%;
@@ -699,9 +661,7 @@ body {
 }
 
 
-/* =========================
-   STACK ITEMS
-========================= */
+/* STACK ITEMS */
 
 .stack-items {
   margin-top: 20px;
@@ -766,9 +726,7 @@ body {
 }
 
 
-/* =========================
-   REMOVE ALL
-========================= */
+/* REMOVE ALL */
 
 .remove-all-btn {
   width: 100%;
@@ -790,9 +748,7 @@ body {
 }
 
 
-/* =========================
-   LOADING
-========================= */
+/* LOADING */
 
 .loading-text {
   color: #64748B;
@@ -801,9 +757,7 @@ body {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 .footer {
   width: 100%;
@@ -869,7 +823,12 @@ body {
 }
 
 .footer-brand-title h2 span {
-  color: #DB2777;
+  background: var(--brand-gradient);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
 }
 
 .footer-brand > p {
@@ -964,9 +923,7 @@ body {
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 768px) {
 
@@ -978,6 +935,7 @@ body {
   .brand-logo {
     width: 30px;
     height: 30px;
+
     font-size: 12px;
   }
 
@@ -1007,8 +965,6 @@ body {
     border-radius: 999px;
 
     font-size: 16px;
-
-    box-shadow: 0 4px 10px rgba(223, 22, 128, 0.18);
   }
 
   .mobile-menu {
@@ -1038,6 +994,7 @@ body {
 
   .hero-container {
     max-width: 1200px;
+
     min-height: auto;
 
     padding: 55px 20px;
@@ -1114,9 +1071,9 @@ body {
   }
 
   .technologies-heading {
-    text-align: center;
-
     margin-bottom: 32px;
+
+    text-align: center;
   }
 
   .technologies-heading h2 {
@@ -1140,7 +1097,7 @@ body {
   }
 
 
-  /* RESET DESKTOP CARD SIZES */
+  /* RESET DESKTOP CARD HEIGHTS */
 
   .technology-card,
   .card-react,
@@ -1156,6 +1113,7 @@ body {
   .card-tailwind,
   .card-docker {
     width: 100%;
+
     height: auto;
 
     padding: 18px;
@@ -1283,9 +1241,7 @@ body {
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* TABLET */
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
