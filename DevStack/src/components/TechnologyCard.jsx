@@ -7,49 +7,27 @@ const TechnologyCard = ({
 
   const getBadgeClass = (badge) => {
 
-    if (badge === "Popular") {
-      return "badge-popular";
-    }
+    if (badge === "Popular") return "badge-popular";
 
-    if (badge === "Versatile") {
-      return "badge-versatile";
-    }
+    if (badge === "Versatile") return "badge-versatile";
 
-    if (badge === "Fast") {
-      return "badge-fast";
-    }
+    if (badge === "Fast") return "badge-fast";
 
-    if (badge === "Standard") {
-      return "badge-standard";
-    }
+    if (badge === "Standard") return "badge-standard";
 
-    if (badge === "Top SQL") {
-      return "badge-top-sql";
-    }
+    if (badge === "Top SQL") return "badge-top-sql";
 
-    if (badge === "Cache") {
-      return "badge-cache";
-    }
+    if (badge === "Cache") return "badge-cache";
 
-    if (badge === "Ubiquitous") {
-      return "badge-ubiquitous";
-    }
+    if (badge === "Ubiquitous") return "badge-ubiquitous";
 
-    if (badge === "Essential") {
-      return "badge-essential";
-    }
+    if (badge === "Essential") return "badge-essential";
 
-    if (badge === "Robust") {
-      return "badge-robust";
-    }
+    if (badge === "Robust") return "badge-robust";
 
-    if (badge === "Modern") {
-      return "badge-modern";
-    }
+    if (badge === "Modern") return "badge-modern";
 
-    if (badge === "Containers") {
-      return "badge-containers";
-    }
+    if (badge === "Containers") return "badge-containers";
 
     return "";
   };
@@ -62,11 +40,9 @@ const TechnologyCard = ({
 
   return (
 
-    <div className="technology-card">
-
+    <div className={`technology-card card-${technology.id}`}>
 
       <div className="card-top">
-
 
         <img
           className="technology-icon"
@@ -74,13 +50,11 @@ const TechnologyCard = ({
           alt={technology.name}
         />
 
-
         <span
           className={`technology-badge ${getBadgeClass(technology.badge)}`}
         >
           {technology.badge}
         </span>
-
 
       </div>
 
@@ -97,16 +71,13 @@ const TechnologyCard = ({
 
       <div className="technology-info">
 
-
         <span className="category-chip">
           {technology.category}
         </span>
 
-
         <span className="difficulty">
           {technology.difficulty}
         </span>
-
 
         <span className="rating">
 
@@ -118,7 +89,6 @@ const TechnologyCard = ({
 
         </span>
 
-
       </div>
 
 
@@ -127,11 +97,8 @@ const TechnologyCard = ({
         onClick={() => handleAddToStack(technology)}
         disabled={isAdded}
       >
-
         {isAdded ? "✓ Added to Stack" : "Add to Stack"}
-
       </button>
-
 
     </div>
 

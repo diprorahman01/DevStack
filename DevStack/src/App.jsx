@@ -4,6 +4,7 @@ import hamburger from "./assets/hamburger.png";
 import hero from "./assets/banner-stack.png";
 
 import Technologies from "./components/Technologies";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -238,6 +239,13 @@ function App() {
       {/* TECHNOLOGIES SECTION */}
 
       <Technologies />
+
+
+
+      {/* FOOTER */}
+
+      <Footer />
+
 
     </>
 
