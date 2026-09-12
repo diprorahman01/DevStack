@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: #0F172A;
+}
+
+
+/* NAVBAR */
+
+.navBar {
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #f1f3f5;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  height: 72px;
+
+  margin: 0 auto;
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* BRAND */
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.brand-logo {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #EC4899;
+
+  color: #FFFFFF;
+
+  font-size: 12px;
+  font-weight: 710;
+}
+
+.brand h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.brand h2 span {
+  color: #DB2777;
+}
+
+
+
+/* NAVIGATION LINKS */
+
+.nav-links {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+
+  color: #475569;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: #D91B7E;
+}
+
+.nav-links .active {
+  color: #D91B7E;
+}
+
+
+/* AUTH BUTTONS */
+
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.auth-buttons button {
+  border: none;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.sign-in {
+  background: transparent;
+
+  color: #334155;
+
+  font-weight: 700;
+
+  -webkit-text-stroke: 1px #000000;
+
+  text-shadow: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.sign-up {
+  padding: 11px 21px;
+
+  border-radius: 26px;
+
+  background: #D91B7E;
+
+  color: #FFFFFF;
+
+  font-weight: 600;
+}
+
+
+/* HAMBURGER */
+
+.hamburger {
+  display: none;
+
+  border: none;
+  background: transparent;
+
+  padding: 0;
+
+  cursor: pointer;
+}
+
+.hamburger img {
+  width: 25px;
+  height: 25px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* MOBILE MENU */
+
+
+.mobile-menu {
+  display: none;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .navbar-container {
+    height: 66px;
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .brand h2 {
+    display: none;
+  }
+
+  .auth-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+  }
+
+  .auth-buttons button {
+    border: none;
+    cursor: pointer;
+
+    font-family: inherit;
+  }
+
+  .sign-in {
+    background: transparent;
+    border: none;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+
+    -webkit-text-stroke: 1px #000000;
+
+    text-shadow: none;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .sign-up {
+    background: #df1680;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    padding: 14px 28px;
+
+    border-radius: 999px;
+
+    box-shadow: 0 4px 10px rgba(223, 22, 128, 0.18);
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    padding: 20px 26px;
+
+    background: #FFFFFF;
+
+    border-top: 1px solid #eeeeee;
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+
+    color: #7B7171;
+
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .mobile-menu a:hover {
+    color: #ec167f;
+  }
+}
