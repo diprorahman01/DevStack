@@ -1,10 +1,10 @@
+import { FaStar } from "react-icons/fa";
 const TechnologyCard = ({
   technology,
   icon,
   handleAddToStack,
   selectedTechnologies
-}) => {
-
+})=> {
 
   const getBadgeClass = (badge) => {
 
@@ -56,83 +56,41 @@ const TechnologyCard = ({
 
   };
 
-
   const isAdded = selectedTechnologies.find(
     (item) => item.id === technology.id
   );
 
-
   return (
 
-    <div
-      className={`technology-card card-${technology.id}`}
-    >
-
-
+    <div className={`technology-card card-${technology.id}`}>
       <div className="card-top">
-
-        <img
-          className="technology-icon"
-          src={icon}
-          alt={technology.name}
-        />
-
-
-        <span
-          className={`technology-badge ${getBadgeClass(technology.badge)}`}
-        >
+        <img className="technology-icon" src={icon} alt={technology.name}/>
+        
+        <span className={`technology-badge ${getBadgeClass(technology.badge)}`}>
           {technology.badge}
         </span>
-
-      </div>
-
-
-      <h3>
-        {technology.name}
-      </h3>
-
-
-      <p className="technology-description">
-        {technology.description}
-      </p>
-
-
-      <div className="technology-info">
-
-        <span className="category-chip">
-          {technology.category}
+    </div>
+    
+    <h3>{technology.name}</h3>
+    <p className="technology-description">{technology.description}</p>
+    
+    <div className="technology-info">
+      <span className="category-chip">{technology.category}</span>
+      <span className="difficulty">{technology.difficulty}</span>
+      <span className="rating">
+        <span className="star">
+          <FaStar size={16} />
         </span>
-
-
-        <span className="difficulty">
-          {technology.difficulty}
-        </span>
-
-
-        <span className="rating">
-
-          <span className="star">
-            ★
-          </span>
 
           {technology.rating}
-
-        </span>
-
-      </div>
-
-
-      <button
-        className="add-stack-btn"
-        onClick={() => handleAddToStack(technology)}
-        disabled={isAdded}
-      >
-
-        {isAdded ? "✓ Added to Stack" : "Add to Stack"}
-
-      </button>
-
-
+          </span>
+          </div>
+          
+          <button className="add-stack-btn" onClick={() => handleAddToStack(technology)} disabled={isAdded}>
+            
+            {isAdded ? "✓ Added to Stack" : "Add to Stack"}
+          </button>
+          
     </div>
 
   );

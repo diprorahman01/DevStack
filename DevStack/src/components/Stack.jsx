@@ -1,118 +1,61 @@
+import { IoCloseOutline } from "react-icons/io5";
+
 const Stack = ({
   selectedTechnologies,
   technologyIcons,
   handleRemoveTechnology,
   handleRemoveAll
-}) => {
-
-
+})=> {
   return (
-
-    <div className="stack-panel">
-
-
-      <h3>
-        Your Stack
-      </h3>
-
-
-      {selectedTechnologies.length === 0 ? (
-
-        <>
-
-          <p className="stack-count">
-            No technologies selected yet.
-          </p>
-
-
-          <div className="stack-empty">
-            Your stack is empty.
-          </div>
-
-        </>
-
-      ) : (
+  <div className="stack-panel">
+    <h3>Your Stack</h3>
+    {selectedTechnologies.length === 0 ? (
+      
+      <>
+      <p className="stack-count">No technologies selected yet.</p>
+      
+      <div className="stack-empty">Your stack is empty.</div>
+      
+      </>) 
+:(
 
         <>
-
-          <p className="stack-count">
-
-            {selectedTechnologies.length}
-
-            {selectedTechnologies.length === 1
-              ? " Technology Selected"
-              : " Technologies Selected"}
-
-          </p>
-
-
-          <div className="stack-items">
-
-            {selectedTechnologies.map((technology) => (
-
-              <div
-                className="stack-item"
-                key={technology.id}
-              >
-
-
-                <div className="stack-item-left">
-
-                  <img
-                    src={technologyIcons[technology.id]}
-                    alt={technology.name}
-                  />
-
-
-                  <div>
-
-                    <h4>
-                      {technology.name}
-                    </h4>
-
-                    <p>
-                      {technology.category}
-                    </p>
-
-                  </div>
+        <p className="stack-count">
+          {selectedTechnologies.length}
+          {selectedTechnologies.length === 1
+          ?"Technology Selected"
+          :"Technologies Selected"}
+        </p>
+        
+        <div className="stack-items">
+          {selectedTechnologies.map((technology)=> (
+            <div className="stack-item" key={technology.id}>
+              
+              <div className="stack-item-left">
+                <img src={technologyIcons[technology.id]} alt={technology.name}/>
+                
+                <div>
+                  <h4>{technology.name}</h4>
+                  <p>{technology.category}</p>
 
                 </div>
 
-
-                <button
-                  className="remove-item-btn"
-                  onClick={() =>
-                    handleRemoveTechnology(technology.id)
-                  }
-                >
-                  ×
-                </button>
-
-
               </div>
-
-            ))}
-
+              
+              <button className="remove-item-btn" onClick={()=>handleRemoveTechnology(technology.id)}aria-label={`Remove ${technology.name}`}><IoCloseOutline size={24} />
+              </button>
+              
+            </div>
+          ))}
+          
           </div>
-
-
-          <button
-            className="remove-all-btn"
-            onClick={handleRemoveAll}
-          >
-            Remove All
-          </button>
+          
+          <button className="remove-all-btn" onClick={handleRemoveAll}>Remove All</button>
 
         </>
-
       )}
-
-
-    </div>
-
-  );
-
-};
-
+      </div>
+      );
+    };
 
 export default Stack;

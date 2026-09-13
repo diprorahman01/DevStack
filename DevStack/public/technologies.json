@@ -1,110 +1,110 @@
 [
   {
-    "id": "react",
-    "name": "React",
-    "category": "Frontend",
-    "description": "A declarative, component-based JavaScript library for building modern user interfaces.",
-    "rating": 4.9,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
+    "id":"react",
+    "name":"React",
+    "category":"Frontend",
+    "description":"A declarative, component-based JavaScript library for building modern user interfaces.",
+    "rating":4.9,
+    "difficulty":"Beginner-Friendly",
+    "badge":"Popular"
   },
   {
-    "id": "vue",
-    "name": "Vue.js",
-    "category": "Frontend",
-    "description": "An approachable, performant, and versatile framework for building web user interfaces.",
-    "rating": 4.8,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Versatile"
+    "id":"vue",
+    "name":"Vue.js",
+    "category":"Frontend",
+    "description":"An approachable, performant, and versatile framework for building web user interfaces.",
+    "rating":4.8,
+    "difficulty":"Beginner-Friendly",
+    "badge":"Versatile"
   },
   {
-    "id": "svelte",
-    "name": "Svelte",
-    "category": "Frontend",
-    "description": "Cybernetically enhanced web apps with compile-time reactivity and zero virtual DOM overhead.",
-    "rating": 4.8,
-    "difficulty": "Intermediate",
-    "badge": "Fast"
+    "id":"svelte",
+    "name":"Svelte",
+    "category":"Frontend",
+    "description":"Cybernetically enhanced web apps with compile-time reactivity and zero virtual DOM overhead.",
+    "rating":4.8,
+    "difficulty":"Intermediate",
+    "badge":"Fast"
   },
   {
-    "id": "nextjs",
-    "name": "Next.js",
-    "category": "Frontend",
-    "description": "The React framework for full-stack web applications with hybrid static and server rendering.",
-    "rating": 4.9,
-    "difficulty": "Intermediate",
-    "badge": "Powerful"
+    "id":"nextjs",
+    "name":"Next.js",
+    "category":"Frontend",
+    "description":"The React framework for full-stack web applications with hybrid static and server rendering.",
+    "rating":4.9,
+    "difficulty":"Intermediate",
+    "badge":"Powerful"
   },
   {
-    "id": "nodejs",
-    "name": "Node.js",
-    "category": "Backend",
-    "description": "An asynchronous event-driven JavaScript runtime built on Chrome's V8 engine.",
-    "rating": 4.8,
-    "difficulty": "Intermediate",
-    "badge": "Standard"
+    "id":"nodejs",
+    "name":"Node.js",
+    "category":"Backend",
+    "description":"An asynchronous event-driven JavaScript runtime built on Chrome's V8 engine.",
+    "rating":4.8,
+    "difficulty":"Intermediate",
+    "badge":"Standard"
   },
   {
-    "id": "postgresql",
-    "name": "PostgreSQL",
-    "category": "Database",
-    "description": "A powerful, open-source object-relational database system with proven reliability.",
-    "rating": 4.9,
-    "difficulty": "Intermediate",
-    "badge": "Top SQL"
+    "id":"postgresql",
+    "name":"PostgreSQL",
+    "category":"Database",
+    "description":"A powerful, open-source object-relational database system with proven reliability.",
+    "rating":4.9,
+    "difficulty":"Intermediate",
+    "badge":"Top SQL"
   },
   {
-    "id": "redis",
-    "name": "Redis",
-    "category": "Database",
-    "description": "In-memory data structure store used as a high-speed database, cache, and message broker.",
-    "rating": 4.8,
-    "difficulty": "Intermediate",
-    "badge": "Cache"
+    "id":"redis",
+    "name":"Redis",
+    "category":"Database",
+    "description":"In-memory data structure store used as a high-speed database, cache, and message broker.",
+    "rating":4.8,
+    "difficulty":"Intermediate",
+    "badge":"Cache"
   },
   {
-    "id": "javascript",
-    "name": "JavaScript",
-    "category": "Language",
-    "description": "The versatile, ubiquitous scripting language powering dynamic behavior across the web.",
-    "rating": 4.9,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Ubiquitous"
+    "id":"javascript",
+    "name":"JavaScript",
+    "category":"Language",
+    "description":"The versatile, ubiquitous scripting language powering dynamic behavior across the web.",
+    "rating":4.9,
+    "difficulty":"Beginner-Friendly",
+    "badge":"Ubiquitous"
   },
   {
-    "id": "typescript",
-    "name": "TypeScript",
-    "category": "Language",
-    "description": "A strongly typed programming language that builds on JavaScript for robust tooling.",
-    "rating": 4.9,
-    "difficulty": "Intermediate",
-    "badge": "Essential"
+    "id":"typescript",
+    "name":"TypeScript",
+    "category":"Language",
+    "description":"A strongly typed programming language that builds on JavaScript for robust tooling.",
+    "rating":4.9,
+    "difficulty":"Intermediate",
+    "badge":"Essential"
   },
   {
-    "id": "java",
-    "name": "Java",
-    "category": "Language",
-    "description": "A secure, object-oriented programming language designed for portability and scale.",
-    "rating": 4.6,
-    "difficulty": "Intermediate",
-    "badge": "Robust"
+    "id":"java",
+    "name":"Java",
+    "category":"Language",
+    "description":"A secure, object-oriented programming language designed for portability and scale.",
+    "rating":4.6,
+    "difficulty":"Intermediate",
+    "badge":"Robust"
   },
   {
-    "id": "tailwind",
-    "name": "Tailwind CSS",
-    "category": "Styling",
-    "description": "A utility-first CSS framework packed with classes that can be composed to build custom UI.",
-    "rating": 4.9,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Modern"
+    "id":"tailwind",
+    "name":"Tailwind CSS",
+    "category":"Styling",
+    "description":"A utility-first CSS framework packed with classes that can be composed to build custom UI.",
+    "rating":4.9,
+    "difficulty":"Beginner-Friendly",
+    "badge":"Modern"
   },
   {
-    "id": "docker",
-    "name": "Docker",
-    "category": "DevOps",
-    "description": "A platform designed to build, share, and run containerized applications reliably.",
-    "rating": 4.9,
-    "difficulty": "Intermediate",
-    "badge": "Containers"
+    "id":"docker",
+    "name":"Docker",
+    "category":"DevOps",
+    "description":"A platform designed to build, share, and run containerized applications reliably.",
+    "rating":4.9,
+    "difficulty":"Intermediate",
+    "badge":"Containers"
   }
 ]
